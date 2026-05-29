@@ -1,18 +1,11 @@
-meme_dict = {
-            "CRINGE": "Algo excepcionalmente raro o embarazoso",
-            "LOL": "Una respuesta común a algo gracioso",
-            "ROFL": "una respuesta a una broma",
-            "SHEESH": "ligera desaprobación",
-            "CREEPY": "aterrador, siniestro",
-            "AGGRO": "ponerse agresivo/enojado"
-            }
+import random
 
-print("¡Hola!, este es un programa para ayudarte mejor a entender la jerga adolecente actual. Para usarlo, simplemente escribe la palabra que no entiendas que significa en mayusculas, ejemplo: LOL. Sin mas decir, espero que les sirva")
+caracteres = "+-/*!&$#?=@abcdefghijklnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"
+longitud = int(input("Porfavor, ingrese la longitud de su contrasena"))
+contrasena = ""
 
-print("-----------------------------------------------")
-for i in range(5):
-    word = input("Escribe una palabra que no entiendas (¡con mayúsculas!): ")
-    if word in meme_dict.keys():
-        print(meme_dict[word])
-    else:
-        print("ERROR: ¡no se encontro la palabra!")
+for i in range(longitud):
+    caracter = random.choice(caracteres)
+    contrasena += caracter
+
+print("contrasena generada:", contrasena)
