@@ -1,0 +1,81 @@
+import discord
+from discord.ext import commands
+import random
+from bot_logic import gen_pass, gen_emoji, flip_coin, gen_number
+
+intents = discord.Intents.default()
+intents.message_content = True
+intents.members = True 
+
+bot = commands.Bot(command_prefix='$', intents=intents)
+
+@bot.event
+async def on_ready():
+    print(f'Logged in as {bot.user} (ID: {bot.user.id})')
+    print('------')
+
+@bot.event
+async def on_member_join(member):
+    guild = member.guild
+    if guild.system_channel is not None:
+        to_send = f'Welcome {member.mention} to {guild.name}!'
+        await guild.system_channel.send(to_send)
+
+@bot.command()
+async def hello(ctx):
+    saludos = [
+        f'¡Hola! ¿Cómo estás?, soy {bot.user}!',
+        f'¡Qué onda! Aquí reportándose el bot {bot.user}.',
+        f'¡Saludos humano! {bot.user} a tu servicio.'
+    ]
+    await ctx.send(random.choice(saludos))
+
+@bot.command()
+async def heh(ctx, count_heh=5):
+    await ctx.send("he" * count_heh)
+
+@bot.command()
+async def bye(ctx):
+    await ctx.send("\U0001f642")
+
+@bot.command()
+async def generate_password(ctx):
+    await ctx.send(gen_pass(10))
+
+@bot.command()
+async def smile(ctx):
+    await ctx.send(gen_emoji())
+
+@bot.command()
+async def coin(ctx):
+    await ctx.send(flip_coin())
+
+@bot.command()
+async def random_number(ctx):
+    await ctx.send(gen_number(1000))
+
+@bot.command()
+async def calc(ctx, operacion: str, num1: float, num2: float):
+    if operacion == "suma":
+        resultado = num1 + num2
+    elif operacion == "resta":
+        resultado = num1 - num2
+    elif operacion == "multiplicar":
+        resultado = num1 * num2
+    elif operacion == "dividir":
+        if num2 == 0:
+            await ctx.send("No puedes dividir entre cero.")
+            return
+        resultado = num1 / num2
+    else:
+        await ctx.send("Operación no válida. Usa: suma, resta, multiplicar o dividir.")
+        return
+
+    await ctx.send(f"El resultado de la {operacion} es: {resultado}")
+
+@bot.command()
+async def next(ctx, numero: int):
+    siguiente = numero + 1
+    await ctx.send(f"El número que sigue después de {numero} es el {siguiente}.")
+
+bot.run("token")
