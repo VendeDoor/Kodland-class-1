@@ -120,6 +120,29 @@ async def mem(ctx):
         picture = discord.File(f)
     await ctx.send(file=picture)
 
+objetos = {
+    "botella de agua vacía": "Amarillo",
+    "lata de atún": "Amarillo",
+    "caja de cereal desarmada": "Azul",
+    "hojas de libreta usadas": "Azul",
+    "botella de vino vacía": "Verde",
+    "frasco de mermelada": "Verde",
+    "cáscaras de plátano": "Marrón / Naranja",
+    "restos de café molido": "Marrón / Naranja",
+    "pañales usados": "Gris / Negro",
+    "toallitas húmedas": "Gris / Negro"
+}
+
+@bot.command()
+async def calc(ctx, producto: str):
+    producto_limpio = producto.lower().strip() 
+    if producto_limpio in objetos:
+        color = objetos[producto_limpio]
+        # ctx.send envía el mensaje de vuelta al canal de Discord
+        await ctx.send(f"El objeto **{producto}** debe ir en el basurero **{color}**.")
+    else:
+        await ctx.send(f"Lo siento, no encontré el objeto **{producto}** en la base de datos.")
+
 
 
 bot.run("token")
