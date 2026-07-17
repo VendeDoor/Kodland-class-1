@@ -1,0 +1,76 @@
+@keyframes color-change {
+  0%   { color: blue; }
+  50%  { color: red; }
+  100% { color: blue; }
+}
+
+body {
+    font-family: Arial,  sans-serif; /* Familia de fuentes */
+    font-size: 20px; /* El tamaño de la fuente principal en el tag <p></p> */
+    background-color: #D6FF6B; /* El color del fondo de la página web */
+    color: #333333; /* El color del texto*/ 
+}
+
+
+h1 {
+    color: #5988FF; /* El color de la cabecera */
+    animation: color-change 3s infinite;
+    font-size: 48px; /* El tamaño de la fuente de la cabecera */
+    font-family: Georgia, serif; /* La familia tipográfica utilizada en la cabecera */
+}
+h2 {
+    color: #FD98FB; /* El color de la cabecera */
+    font-size: 30px; /* El tamaño de la fuente de la cabecera */
+    font-family: Georgia, serif; /* La familia tipográfica utilizada en la cabecera */
+}
+img{
+    width: 400px;
+    box-shadow: 0px 4px 6px rgb(0, 0, 0);
+}
+
+li {
+    color: #FFFFFF;
+}
+
+button{
+    background-color: #008a00;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0px 4px 6px rgb(0, 0, 0);
+}
+
+form{
+    max-width: 400px;
+    margin-top: 20px;
+    margin: 20px auto;
+    border: 5px solid;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: rgb(245, 229, 194);
+}
+
+form label{
+    margin-top: 10px;
+    display: block;
+}
+
+form input{
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 4px;
+}
+
+#button_enviar{
+    width: 100%;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    margin-top: 20px;
+    box-shadow: none;
+    background-color: blue;
+}
+
+#button_enviar:hover{
+    background-color: rgb(0, 0, 175);
+}
