@@ -1,0 +1,68 @@
+body {
+    font-family: Arial,  sans-serif; /* Familia de fuentes */
+    font-size: 20px; /* El tamaño de la fuente principal en el tag <p></p> */
+    background-color: #e7e6a5; /* El color del fondo de la página web */
+    color: #333333; /* El color del texto*/ 
+}
+
+
+h1 {
+    max-width: 280px;
+    color: #000000; /* El color de la cabecera */
+    font-size: 48px; /* El tamaño de la fuente de la cabecera */
+    font-family: Arial, sans-serif;
+    margin: 20px auto;
+}
+
+#login{
+    max-width: 320px;
+    color: #000000; /* El color de la cabecera */
+    font-size: 48px; /* El tamaño de la fuente de la cabecera */
+    font-family: Arial, sans-serif;
+    margin-top: 20px;
+}
+
+li {
+    color: #FFFFFF;
+}
+
+form{
+    max-width: 400px;
+    margin-top: 20px;
+    margin: 20px auto;
+    border: 5px solid;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: rgb(245, 229, 194);
+}
+
+form label{
+    margin-top: 10px;
+    display: block;
+}
+
+form input{
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 4px;
+}
+
+#button_enviar{
+    width: 100%;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    margin-top: 20px;
+    box-shadow: none;
+    background-color: blue;
+}
+
+#button_enviar:hover{
+    background-color: rgb(0, 0, 175);
+}
+
+a{
+    display: block;
+    text-align: center;
+    margin: 20px auto;
+}

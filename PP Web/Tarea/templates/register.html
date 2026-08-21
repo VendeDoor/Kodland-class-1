@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Un sitio web más</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <h1>Registrarse</h1>
+     <form action="/data_recolection", method="POST">
+        <label for="">Ingrese su nombre</label>
+        <input type="text", id="name", name="name">
+        <label for="">Ingrese sus apellidos</label>
+        <input type="text", id="lastname" name="lastname">
+        <label for="">Ingrese su correo electronico</label>
+        <input type="email", id="email", name="email">
+        <label for="">Ingrese una contraseña</label>
+        <input type="password", id="password", name="password">
+        <label for="">Ingrese su fecha de nacimiento</label>
+        <input type="date", id="birthday", name="birthday">
+        <label for="country">Seleccione el país donde vive</label>
+        <select name="country" id="country">
+            <option value="" disabled selected>Choose a country / Seleccione un país</option>
+            <option>Antigua and Barbuda</option>
+            <option>Argentina</option>
+            <option>Bahamas</option>
+            <option>Barbados</option>
+            <option>Belize</option>
+            <option>Bolivia</option>
+            <option>Brasil</option>
+            <option>Canada</option>
+            <option>Chile</option>
+            <option>Colombia</option>
+            <option>Costa Rica</option>
+            <option>Cuba</option>
+            <option>Dominica</option>
+            <option>Ecuador</option>
+            <option>El Salvador</option>
+            <option>United States</option>
+            <option>Grenada</option>
+            <option>Guatemala</option>
+            <option>Guyana</option>
+            <option>Haïti</option>
+            <option>Honduras</option>
+            <option>Jamaica</option>
+            <option>México</option>
+            <option>Nicaragua</option>
+            <option>Panamá</option>
+            <option>Paraguay</option>
+            <option>Perú</option>
+            <option>República Dominicana</option>
+            <option>Saint Kitts and Nevis</option>
+            <option>Saint Vincent and the Grenadines</option>
+            <option>Saint Lucia</option>
+            <option>Suriname</option>
+            <option>Trinidad and Tobago</option>
+            <option>Uruguay</option>
+            <option>Venezuela</option>
+        </select>
+        <button type="submit" id="button_enviar">Registrarse</button>
+     </form>
+     <a href="/">¿Ya tienes cuenta? ¡Inicia sesión aqui!</a>
+</body>
+</html>

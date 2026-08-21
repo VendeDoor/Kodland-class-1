@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Un sitio web más</title>
+    <link rel="stylesheet" href="/static/css/notas.css">
+</head>
+<body>
+    <h1 id="notes">Notas</h1>
+    <h2 id="correo">Usuario indentificado con el correo: {{ correo }}</h2>
+    <form action="/notas" method="POST">
+        <label for="note">Ingrese el titulo de su nota</label>
+        <input type="text" id="note" name="note" required>
+        <label for="contenido">Ingrese su nota</label>
+        <input type="text" id="contenido" name="contenido" required>
+        <button type="submit" id="button_enviar">Guardar nota</button>
+     </form>
+</body>
+</html>
